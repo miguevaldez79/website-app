@@ -6,6 +6,11 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
+import { ConsultaPadronComponent } from './components/consulta-padron/consulta-padron.component';
+import { CceCreComponent } from './components/cce-cre/cce-cre.component';
+import { GanaTuColegioComponent } from './components/gana-tu-colegio/gana-tu-colegio.component';
+import { ReporteriaComponent } from './components/reporteria/reporteria.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const routes: Routes = [
   {
@@ -24,6 +29,26 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'consulta-padron',
+        component:ConsultaPadronComponent
+      },
+      {
+        path: 'cce-cre',
+        component:CceCreComponent
+      },
+      {
+        path: 'gana-tu-colegio',
+        component:GanaTuColegioComponent
+      },
+      {
+        path: 'reporteria',
+        component:ReporteriaComponent
+      },
+      {
+        path: 'usuarios',
+        component:UsuariosComponent
       },
       {
         path: 'theme',

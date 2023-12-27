@@ -40,6 +40,11 @@ import {
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
+import { ConsultaPadronComponent } from './components/consulta-padron/consulta-padron.component';
+import { GanaTuColegioComponent } from './components/gana-tu-colegio/gana-tu-colegio.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { ReporteriaComponent } from './components/reporteria/reporteria.component';
+import { CceCreComponent } from './components/cce-cre/cce-cre.component';
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -48,7 +53,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS],
+  declarations: [AppComponent, ...APP_CONTAINERS, ConsultaPadronComponent, GanaTuColegioComponent, UsuariosComponent, ReporteriaComponent, CceCreComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
