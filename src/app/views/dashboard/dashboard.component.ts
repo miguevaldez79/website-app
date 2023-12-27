@@ -10,6 +10,7 @@ import {takeUntil, catchError } from "rxjs/operators";
 import { DropDown } from "./../../../../src/types/dropdown.types";
 import { DashboardChartsData, IChartProps } from './dashboard-charts-data';
 import { ConsultasService } from "../../../../src/services/consultas.service";
+import { Router } from '@angular/router';
 
 interface IUser {
   name: string;
@@ -58,7 +59,8 @@ export class DashboardComponent implements OnInit {
   constructor(
     private chartsData: DashboardChartsData,
     private ConsultasService: ConsultasService,
-   private formBuilder:FormBuilder
+   private formBuilder:FormBuilder,
+   private router: Router
 
     ) {
       this.form = this.formBuilder.group({
@@ -79,6 +81,18 @@ export class DashboardComponent implements OnInit {
   
   }
 
+  navigateToGanaTuColegio() {
+    this.router.navigate(['/gana-tu-colegio']);
+  }
+  
+  navigateToPadron() {
+    this.router.navigate(['/consulta-padron']);
+  }
+
+  navigateToReporteria() {
+    this.router.navigate(['/reporteria']);
+  }
+  
 
 
   initCharts(): void {
